@@ -1,0 +1,4 @@
+C:\Users\513400\Documents\Visual Studio 2010\Projects\Angular\CA_LoginModule\bin\CA_LoginModule.dll
+C:\Users\513400\Documents\Visual Studio 2010\Projects\Angular\CA_LoginModule\bin\CA_LoginModule.pdb
+C:\Users\513400\Documents\Visual Studio 2010\Projects\Angular\CA_LoginModule\obj\Debug\CA_LoginModule.dll
+C:\Users\513400\Documents\Visual Studio 2010\Projects\Angular\CA_LoginModule\obj\Debug\CA_LoginModule.pdb
