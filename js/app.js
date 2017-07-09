@@ -163,6 +163,10 @@ app.controller('unisexSubCategoriesCtrl', function () {
 	
 });
 
+app.controller('menSubCategoriesCtrl', function () {
+    
+});
+
 
 app.factory('authentication', function () {
     return {
