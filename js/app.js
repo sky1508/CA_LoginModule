@@ -165,10 +165,13 @@ app.controller('unisexSubCategoriesCtrl', function () {
 
 app.controller('menSubCategoriesCtrl', function ($scope) {
     //Contains the first img array
-    $scope.firstImg = ["../resources/business.jpg", "../resources/business2.jpg"];
-
+    //$scope.firstImg = ["../resources/business.jpg", "../resources/business2.jpg"];
+    $scope.firstImg  = ["../resources/men/shirts/collar/collar1.png","../resources/men/shirts/collar/collar2.png"];
+    $scope.secondImg = ["../resources/men/shirts/sleeve/leftSleeve1.png","../resources/men/shirts/sleeve/leftSleeve2.png"];
+    $scope.thirdImg  = ["../resources/men/shirts/sleeve/rightSleeve1.png","../resources/men/shirts/sleeve/rightSleeve2.png"];
+    $scope.fourthImg = ["../resources/men/shirts/body/body1.jpg","../resources/men/shirts/body/body2.png"];
     //Contains the second img array
-    $scope.secondImg = ["../resources/business2.jpg", "../resources/business.jpg"];
+    //$scope.secondImg = ["../resources/business2.jpg", "../resources/business.jpg"];
 
 
     $scope.imgCopy = function (srcImg) {
@@ -181,6 +184,10 @@ app.controller('menSubCategoriesCtrl', function ($scope) {
 
     $scope.imgCopy3 = function (srcImg) {
         $('#main3').attr("src", srcImg);
+    };
+
+    $scope.imgCopy4 = function (srcImg) {
+        $('#main4').attr("src", srcImg);
     };
 });
 

@@ -1,8 +1,8 @@
 ﻿<div id="menSubCategory" ng-controller="menSubCategoriesCtrl">
-    <div class="col-sm-8" style="background-color: lavender;">
+    <div class="col-sm-9" style="background-color: lavender;">
         <div class="container-fluid">
             <!--Selection column-->
-            <div class="col-sm-6" style="background-color: lightblue;">
+            <div class="col-sm-3" style="background-color: lightblue;">
                 <div class="row">
                     <div class="col-sm-4" style="background-color: lightblue;">
                         <h1>
@@ -64,24 +64,106 @@
                             </div>
                     </div> 
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            Second</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal3">
+                                Open Third Modal</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal3" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                &times;</button>
+                                            <h4 class="modal-title">
+                                                Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div id="thirdImg" ng-repeat="img in thirdImg" ng-click="imgCopy3(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            Fourth</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal4">
+                                Open Fourth Modal</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal4" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                &times;</button>
+                                            <h4 class="modal-title">
+                                                Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div id="FourthImg" ng-repeat="img in fourthImg" ng-click="imgCopy4(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
                 
             </div>
 
             <!--Drag, Drop Column-->
-            <div class="col-sm-6" style="background-color: lightgreen;">
+            <div class="col-sm-8" style="background-color: lightgreen;">
                 <div class="row">
-                    <img id="main1" width="150" height="100" />
+                    <img id="main1" width="374" height="135" />
                 </div>
                 <div class="row">
-                    <img id="main2" width="250" height="200" />
-                    <img id="main3" width="250" height="200" />
-                    <img id="main4" width="250" height="200" />
+                    <img id="main2" width="150" height="630" />
+                    <img id="main4" width="252" height="630" />
+                    <img id="main3" width="150" height="630" />
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-4" style="background-color: lavenderblush;">
-        <h1>
-            P & F</h1>
+    <div class="col-sm-3" style="background-color: lavenderblush;">
+        <h1>P & F</h1>
+        <table>
+            <tr>
+                <td><h2>Product Name</h2></td>
+                <td><h2>Formal Shirt</h2></td>    
+            </tr>
+
+            <tr>
+                <td><h2>Product Material</h2></td>    
+                <td><h2>Cotton</h2></td>    
+            </tr>
+
+            <tr>
+                <td><h2>Product Quantity</h2></td>        
+                <td><h2>1</h2></td>    
+            </tr>
+
+            <tr>
+                <td><h2>Product Price</h2></td>        
+                <td><h2>Rs. 200</h2></td>    
+            </tr>
+        </table>
     </div>
