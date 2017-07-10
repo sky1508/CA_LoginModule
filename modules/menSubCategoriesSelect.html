@@ -1,109 +1,87 @@
-﻿<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+﻿<div id="menSubCategory" ng-controller="menSubCategoriesCtrl">
+    <div class="col-sm-8" style="background-color: lavender;">
+        <div class="container-fluid">
+            <!--Selection column-->
+            <div class="col-sm-6" style="background-color: lightblue;">
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            First</h1>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal1">
+                            Open First Modal</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal1" role="dialog">
+                            <div class="modal-dialog ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            &times;</button>
+                                        <h4 class="modal-title">
+                                            Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="firstImg" ng-repeat="img in firstImg" ng-click="imgCopy(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                            Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            Second</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal2">
+                                Open Second Modal</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modal2" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                &times;</button>
+                                            <h4 class="modal-title">
+                                                Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div id="secondImg" ng-repeat="img in secondImg" ng-click="imgCopy2(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+                
+            </div>
 
-    <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
-
-<div id="menSubCategory" ng-controller="menSubCategoriesCtrl">
-<div><img id="main1"/></div>
-<div><img id="main2"/></div>
-<div><img id="main3"/></div>
-<div><img id="main4"/></div>
-<div><img id="main5"/></div>
-
-<div class="container">
-
-	<a id="collarModalTrigger" href="#collarModal" class="btn">Click here to Select the collar</a>
-	<div id="collarModal" class="popupContainer" style="display:none;">
-		<header class="popupHeader">
-			<span class="header_title">Collar</span>
-			<span class="modal_close"><i class="fa fa-times"></i></span>
-		</header>
-		
-		<section class="popupBody">
-			<div class="centeredText">
-					<span>Select Your Desired Collar</span>
-			</div>
-
-			<div class="collar_select">
-				<div class="">
-					<ul id="thumbs">
-						<li><img id="img1" src="resources/collar/collar1.jpg" width="150" height="100" /></li>
-						<li><img id="img2" src="resources/collar/collar2.jpg" width="150" height="100" /></li>
-						<li><img id="img3" src="resources/collar/collar3.jpg" width="150" height="100" /></li>
-					</ul>
-				</div>			
-			</div>
-
-			
-		</section>
-	</div>
-
-	<a id="sleeveModalTrigger" href="#sleeveModal" class="btn">Sleeve Type</a>
-	<div id="sleeveModal" class="popupContainer" style="display:none;">
-		<header class="popupHeader">
-			<span class="header_title">Sleeve</span>
-			<span class="modal_close"><i class="fa fa-times"></i></span>
-		</header>
-		
-		<section class="popupBody">
-			<div class="centeredText">
-					<span>Select Your Desired Sleeve</span>
-			</div>
-
-			<div class="sleeve_select">
-				<div class="">
-					<ul id="sleeveul">
-						<li><img id="img1" src="resources/collar/collar1.jpg" width="150" height="100" /></li>
-						<li><img id="img2" src="resources/collar/collar2.jpg" width="150" height="100" /></li>
-					</ul>
-				</div>			
-			</div>	
-		</section>
-	</div>
-</div>
-
-</div>
-
-
-<div class="container">
-  <h2>Small Modal</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+            <!--Drag, Drop Column-->
+            <div class="col-sm-6" style="background-color: lightgreen;">
+                <div class="row">
+                    <img id="main1" width="150" height="100" />
+                </div>
+                <div class="row">
+                    <img id="main2" width="250" height="200" />
+                    <img id="main3" width="250" height="200" />
+                    <img id="main4" width="250" height="200" />
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <ul id="sleeveul">
-			<li><img id="img1" src="resources/collar/collar1.jpg" width="150" height="100" /></li>
-			<li><img id="img2" src="resources/collar/collar2.jpg" width="150" height="100" /></li>
-		  </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
 
- <script>
- 		$("#collarModalTrigger").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" });
-
- 		$("#sleeveModalTrigger").leanModal({top : 100, overlay : 0.6, closeButton: ".modal_close" });							
-		$(function () {
-    		$('#thumbs img').on('click', function () {
-       			$('#main1').attr('src', $(this).attr('src')); 
-    		});
-		});
-
-		$(function () {
-    		$('#sleeveul img').on('click', function () {
-       			$('#main2').attr('src', $(this).attr('src')); 
-    		});
-		});
-</script>
+    <div class="col-sm-4" style="background-color: lavenderblush;">
+        <h1>
+            P & F</h1>
+    </div>
