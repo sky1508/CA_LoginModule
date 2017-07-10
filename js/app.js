@@ -24,18 +24,18 @@ app.config(function ($routeProvider) {
         templateUrl: "modules/menCategoriesSelect.html",
         controller: "menCategoriesCtrl"
     });
-	
-	$routeProvider.when("/womenCategories", {
+
+    $routeProvider.when("/womenCategories", {
         templateUrl: "modules/womenSubCategoriesSelect.html",
         controller: "womenSubCategoriesCtrl"
     });
-	
-	$routeProvider.when("/unisexCategories", {
+
+    $routeProvider.when("/unisexCategories", {
         templateUrl: "modules/unisexSubCategoriesSelect.html",
         controller: "menCategoriesCtrl"
     });
-	
-	$routeProvider.when("/menSubCategories", {
+
+    $routeProvider.when("/menSubCategories", {
         templateUrl: "modules/menSubCategoriesSelect.html",
         controller: "menSubCategoriesCtrl"
     });
@@ -54,17 +54,17 @@ app.run(function (authentication, $rootScope, $location) {
 
 app.controller('LoginCtrl', function ($scope, $http, $location, authentication) {
     /*$scope.login = function () {
-        if ($scope.username === 'admin' && $scope.password === 'pass') {
-            console.log('successful')
-            authentication.isAuthenticated = true;
-            authentication.user = { name: $scope.username };
-            $location.url("/");
-        } else {
-            $scope.loginError = "Invalid username/password combination";
-            console.log('Login failed..');
-            $scope.username = "";
-            $scope.password = "";
-        };
+    if ($scope.username === 'admin' && $scope.password === 'pass') {
+    console.log('successful')
+    authentication.isAuthenticated = true;
+    authentication.user = { name: $scope.username };
+    $location.url("/");
+    } else {
+    $scope.loginError = "Invalid username/password combination";
+    console.log('Login failed..');
+    $scope.username = "";
+    $scope.password = "";
+    };
     };*/
 });
 
@@ -73,7 +73,7 @@ app.controller('caAppCtrl', function ($scope, authentication, $rootScope) {
   [
   	{ url: 'modules/login.html' },
     { url: 'modules/home.html' },
-    {url: 'modules/clothTypeSelect.html' }
+    { url: 'modules/clothTypeSelect.html' }
   ];
     $rootScope.template = $scope.templates[0];
     $scope.login = function (username, password) {
@@ -91,80 +91,97 @@ app.controller('caAppCtrl', function ($scope, authentication, $rootScope) {
 
 app.controller('HomeCtrl', function ($rootScope, $scope, authentication, $location) {
     $scope.user = $rootScope.user;
-	if($rootScope.genderCategory === "men"){
-		$location.path("/menCategories");
-	}
-	else if($rootScope.genderCategory === "women"){
-		$location.path("/womenCategories");
-		
-	}
-	else if($rootScope.genderCategory === "unisex"){
-		$location.path("/unisexCategories");
-	}
-	else if($rootScope.menSubCategory === "casual_shirt" || $rootScope.menSubCategory === "formal_shirt" || 
-			$rootScope.menSubCategory === "tshirt" || $rootScope.menSubCategory === "sweatshirt"){
-		$location.path("/menSubCategories");
-		
-	}
+    if ($rootScope.genderCategory === "men") {
+        $location.path("/menCategories");
+    }
+    else if ($rootScope.genderCategory === "women") {
+        $location.path("/womenCategories");
+
+    }
+    else if ($rootScope.genderCategory === "unisex") {
+        $location.path("/unisexCategories");
+    }
+    else if ($rootScope.menSubCategory === "casual_shirt" || $rootScope.menSubCategory === "formal_shirt" ||
+			$rootScope.menSubCategory === "tshirt" || $rootScope.menSubCategory === "sweatshirt") {
+        $location.path("/menSubCategories");
+
+    }
 
 });
 
 app.controller('clothTypeSelectCtrl', function ($rootScope, $scope, $location) {
 
     $scope.menIconImage = "../resources/men.png";
-	
-	$scope.menFunc = function (){
-		$rootScope.genderCategory = "men";
-		$rootScope.template = $scope.templates[1];
-		$location.url("/menCategoriesSelect");
-	};
-	
-	$scope.womenFunc = function (){
-		$rootScope.genderCategory = "women";
-		$rootScope.template = $scope.templates[1];
-		$location.url("/womenSubCategoriesSelect");
-	};
-	
-	$scope.unisexFunc = function (){
-		$rootScope.genderCategory = "unisex";
-		$rootScope.template = $scope.templates[1];
-		$location.url("/unisexSubCategoriesSelect");
-	};
+
+    $scope.menFunc = function () {
+        $rootScope.genderCategory = "men";
+        $rootScope.template = $scope.templates[1];
+        $location.url("/menCategoriesSelect");
+    };
+
+    $scope.womenFunc = function () {
+        $rootScope.genderCategory = "women";
+        $rootScope.template = $scope.templates[1];
+        $location.url("/womenSubCategoriesSelect");
+    };
+
+    $scope.unisexFunc = function () {
+        $rootScope.genderCategory = "unisex";
+        $rootScope.template = $scope.templates[1];
+        $location.url("/unisexSubCategoriesSelect");
+    };
 });
 
 app.controller('menCategoriesCtrl', function ($rootScope, $scope, $location) {
-	$scope.casualShirtFunc = function(){
-		$rootScope.menSubCategory = "casual_shirt";
-		$rootScope.template = $scope.templates[1];
-		$location.url("/menSubCategories");
-	};
-	
-	$scope.formalShirtFunc = function(){
-		$rootScope.menSubCategory = "formal_shirt";
-		$rootScope.template = $scope.templates[1];
-	};
-	
-	$scope.tshirtFunc = function(){
-		$rootScope.menSubCategory = "tshirt";
-		$rootScope.template = $scope.templates[1];
-	};
-	
-	$scope.sweatShirtFunc = function(){
-		$rootScope.menSubCategory = "sweatshirt";
-		$rootScope.template = $scope.templates[1];
-	};
+    $scope.casualShirtFunc = function () {
+        $rootScope.menSubCategory = "casual_shirt";
+        $rootScope.template = $scope.templates[1];
+        $location.url("/menSubCategories");
+    };
+
+    $scope.formalShirtFunc = function () {
+        $rootScope.menSubCategory = "formal_shirt";
+        $rootScope.template = $scope.templates[1];
+    };
+
+    $scope.tshirtFunc = function () {
+        $rootScope.menSubCategory = "tshirt";
+        $rootScope.template = $scope.templates[1];
+    };
+
+    $scope.sweatShirtFunc = function () {
+        $rootScope.menSubCategory = "sweatshirt";
+        $rootScope.template = $scope.templates[1];
+    };
 });
 
 app.controller('womenSubCategoriesCtrl', function () {
-	
+
 });
 
 app.controller('unisexSubCategoriesCtrl', function () {
-	
+
 });
 
-app.controller('menSubCategoriesCtrl', function () {
-    
+app.controller('menSubCategoriesCtrl', function ($scope) {
+    //Contains the first img array
+    $scope.firstImg = ["../resources/business.jpg", "../resources/business2.jpg"];
+
+    //Contains the second img array
+    $scope.secondImg = ["../resources/business2.jpg", "../resources/business.jpg"];
+
+
+    $scope.imgCopy = function (srcImg) {
+        $('#main1').attr("src", srcImg);
+    };
+
+    $scope.imgCopy2 = function (srcImg) {
+        $('#main2').attr("src", srcImg);
+    };
+
+    $scope.imgCopy3 = function (srcImg) {
+        $('#main3').attr("src", srcImg);
+    };
 });
 
 
