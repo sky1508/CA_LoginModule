@@ -1,8 +1,9 @@
 ﻿<div id="menSubCategory" ng-controller="menSubCategoriesCtrl">
-    <div class="col-sm-9" style="background-color: lavender;">
+
+    <div class="col-sm-8" style="background-color: lavender;">
         <div class="container-fluid">
             <!--Selection column-->
-            <div class="col-sm-3" style="background-color: lightblue;">
+            <div class="col-sm-6" style="background-color: lightblue;">
                 <div class="row">
                     <div class="col-sm-4" style="background-color: lightblue;">
                         <h1>
@@ -68,11 +69,11 @@
                 <div class="row">
                     <div class="col-sm-4" style="background-color: lightblue;">
                         <h1>
-                            Second</h1>
-                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal3">
-                                Open Third Modal</button>
+                            Fifth</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal5">
+                                Open Fifth Modal</button>
                             <!-- Modal -->
-                            <div class="modal fade" id="modal3" role="dialog">
+                            <div class="modal fade" id="modal5" role="dialog">
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -82,7 +83,7 @@
                                                 Modal Header</h4>
                                         </div>
                                         <div class="modal-body">
-                                           <div id="thirdImg" ng-repeat="img in thirdImg" ng-click="imgCopy3(img)">
+                                           <div id="fifthImg" ng-repeat="img in secondImg" ng-click="imgCopy5(img)">
                                             <img  width="150" height="100" ng-src="{{ img }}" />
                                         </div>
                                         </div>
@@ -99,11 +100,11 @@
                 <div class="row">
                     <div class="col-sm-4" style="background-color: lightblue;">
                         <h1>
-                            Fourth</h1>
-                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal4">
-                                Open Fourth Modal</button>
+                            Sixth</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal6">
+                                Open Sixth Modal</button>
                             <!-- Modal -->
-                            <div class="modal fade" id="modal4" role="dialog">
+                            <div class="modal fade" id="modal6" role="dialog">
                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -113,7 +114,7 @@
                                                 Modal Header</h4>
                                         </div>
                                         <div class="modal-body">
-                                           <div id="FourthImg" ng-repeat="img in fourthImg" ng-click="imgCopy4(img)">
+                                           <div id="sixthImg" ng-repeat="img in secondImg" ng-click="imgCopy6(img)">
                                             <img  width="150" height="100" ng-src="{{ img }}" />
                                         </div>
                                         </div>
@@ -129,41 +130,38 @@
                 
             </div>
 
-            <!--Drag, Drop Column-->
-            <div class="col-sm-8" style="background-color: lightgreen;">
-                <div class="row">
-                    <img id="main1" width="374" height="135" />
+            <!--Front Div-->
+            <div class="col-sm-6" style="background-color: lightgrey;">
+                <div id="first" class="row">
+                    <img id="main1" width="150" height="100" />
                 </div>
-                <div class="row">
-                    <img id="main2" width="150" height="630" />
-                    <img id="main4" width="252" height="630" />
-                    <img id="main3" width="150" height="630" />
+                <div id="second" class="row">
+                    <img id="main2" width="250" height="200" />
+                    <img id="main3" width="250" height="200" />
+                    <img id="main4" width="250" height="200" />
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-3" style="background-color: lavenderblush;">
-        <h1>P & F</h1>
-        <table>
-            <tr>
-                <td><h2>Product Name</h2></td>
-                <td><h2>Formal Shirt</h2></td>    
-            </tr>
-
-            <tr>
-                <td><h2>Product Material</h2></td>    
-                <td><h2>Cotton</h2></td>    
-            </tr>
-
-            <tr>
-                <td><h2>Product Quantity</h2></td>        
-                <td><h2>1</h2></td>    
-            </tr>
-
-            <tr>
-                <td><h2>Product Price</h2></td>        
-                <td><h2>Rs. 200</h2></td>    
-            </tr>
-        </table>
+    <div class="col-sm-4" style="background-color: lightblue;">
+                <!--Back Div-->
+                <div id="fifth" class="row">
+                    <img id="back1" width="150" height="100" />
+                </div>
+                <div id="sixth" class="row">
+                    <img id="back2" width="250" height="200" />
+                    <img id="back3" width="250" height="200" />
+                    <img id="back4" width="250" height="200" />
+                </div>
+        
+        <h1>
+            P & F</h1>
+        
+        <!--To save the entire front & back img using New div-->
+        <button class="btn btn-success" ng-click="save()">Save</button>
+        <div id='New'></div>
     </div>
+
+    
+</div>

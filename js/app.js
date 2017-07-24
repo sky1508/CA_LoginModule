@@ -165,13 +165,10 @@ app.controller('unisexSubCategoriesCtrl', function () {
 
 app.controller('menSubCategoriesCtrl', function ($scope) {
     //Contains the first img array
-    //$scope.firstImg = ["../resources/business.jpg", "../resources/business2.jpg"];
-    $scope.firstImg  = ["../resources/men/shirts/collar/collar1.png","../resources/men/shirts/collar/collar2.png"];
-    $scope.secondImg = ["../resources/men/shirts/sleeve/leftSleeve1.png","../resources/men/shirts/sleeve/leftSleeve2.png"];
-    $scope.thirdImg  = ["../resources/men/shirts/sleeve/rightSleeve1.png","../resources/men/shirts/sleeve/rightSleeve2.png"];
-    $scope.fourthImg = ["../resources/men/shirts/body/body1.jpg","../resources/men/shirts/body/body2.png"];
+    $scope.firstImg = ["../resources/business.jpg", "../resources/business2.jpg"];
+
     //Contains the second img array
-    //$scope.secondImg = ["../resources/business2.jpg", "../resources/business.jpg"];
+    $scope.secondImg = ["../resources/business2.jpg", "../resources/business.jpg"];
 
 
     $scope.imgCopy = function (srcImg) {
@@ -186,9 +183,35 @@ app.controller('menSubCategoriesCtrl', function ($scope) {
         $('#main3').attr("src", srcImg);
     };
 
-    $scope.imgCopy4 = function (srcImg) {
-        $('#main4').attr("src", srcImg);
+    $scope.imgCopy5 = function (srcImg) {
+        $('#back1').attr("src", srcImg);
     };
+
+    $scope.imgCopy6 = function (srcImg) {
+        $('#back2').attr("src", srcImg);
+    };
+
+    $scope.save = function () {
+        $('#New').html("<table id='table1'><tr><td><div id='a'>" + $('#first').html() + "</div></td></tr>" +
+        "<tr><td><div id='b'>" + $('#second').html() + "</div></td></tr><tr><td><div id='c'>" + $('#fifth').html() +
+         "</div></td></tr>" + "<tr><td><div id='d'>" + $('#sixth').html() + "</div></td></tr></table>")
+
+        //alert('Save');
+
+        html2canvas($("#New"), {
+            onrendered: function (canvas) {
+                theCanvas = canvas;
+                //document.body.appendChild(canvas);
+
+                // Convert and download as image 
+                Canvas2Image.saveAsPNG(canvas);
+                //$("#img-out").append(canvas);
+                // Clean up 
+                //document.body.removeChild(canvas);
+            }
+        });
+    }
+
 });
 
 
