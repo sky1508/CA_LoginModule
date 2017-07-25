@@ -1,9 +1,10 @@
 ﻿<div id="menSubCategory" ng-controller="menSubCategoriesCtrl">
 
-    <div class="col-sm-8" style="background-color: lavender;">
+    <div class="col-sm-12" style="background-color: #d9e0df;">
         <div class="container-fluid">
-            <!--Selection column-->
-            <div class="col-sm-6" style="background-color: lightblue;">
+
+            <!--Left Side Menu-->
+            <div class="col-sm-2" style="background-color: lightblue;">
                 <div class="row">
                     <div class="col-sm-4" style="background-color: lightblue;">
                         <h1>
@@ -131,7 +132,7 @@
             </div>
 
             <!--Front Div-->
-            <div class="col-sm-6" style="background-color: lightgrey;">
+            <div class="col-sm-4" style="background-color: #c0e2ac;">
                 <div id="first" class="row">
                     <img id="main1" width="150" height="100" />
                 </div>
@@ -141,11 +142,9 @@
                     <img id="main4" width="250" height="200" />
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="col-sm-4" style="background-color: lightblue;">
-                <!--Back Div-->
+            
+            <!--Back Div-->
+            <div class="col-sm-4" style="background-color: #e2dec5;">
                 <div id="fifth" class="row">
                     <img id="back1" width="150" height="100" />
                 </div>
@@ -154,14 +153,152 @@
                     <img id="back3" width="250" height="200" />
                     <img id="back4" width="250" height="200" />
                 </div>
-        
-        <h1>
-            P & F</h1>
-        
-        <!--To save the entire front & back img using New div-->
-        <button class="btn btn-success" ng-click="save()">Save</button>
-        <div id='New'></div>
-    </div>
+            </div>
+          
+            <!--Right Side Menu-->
+            <div class="col-sm-2" style="background-color: lightblue;">
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            First</h1>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal1">
+                            Open First Modal</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="Div1" role="dialog">
+                            <div class="modal-dialog ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            &times;</button>
+                                        <h4 class="modal-title">
+                                            Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="Div2" ng-repeat="img in firstImg" ng-click="imgCopy(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                                            Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            Second</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal2">
+                                Open Second Modal</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="Div3" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                &times;</button>
+                                            <h4 class="modal-title">
+                                                Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div id="Div4" ng-repeat="img in secondImg" ng-click="imgCopy2(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
 
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            Fifth</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal5">
+                                Open Fifth Modal</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="Div5" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                &times;</button>
+                                            <h4 class="modal-title">
+                                                Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div id="Div6" ng-repeat="img in secondImg" ng-click="imgCopy5(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4" style="background-color: lightblue;">
+                        <h1>
+                            Sixth</h1>
+                          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal6">
+                                Open Sixth Modal</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="Div7" role="dialog">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                &times;</button>
+                                            <h4 class="modal-title">
+                                                Modal Header</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div id="Div8" ng-repeat="img in secondImg" ng-click="imgCopy6(img)">
+                                            <img  width="150" height="100" ng-src="{{ img }}" />
+                                        </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
     
+    <div class="col-sm-12" style="background-color: #d0deea;">
+        <!--Preview-->
+        <div class="col-sm-6" style="background-color: #e2dec5;">
+             <!--To save the entire front & back img using New div-->
+            <button class="btn btn-success" ng-click="save()">Save</button>
+            <h1>Preview</h1>
+            <div id='New'></div>
+        </div>
+
+        <!--Price & Features-->
+        <div class="col-sm-6" style="background-color: #c0e2ac;">
+             <h1>P & F</h1>
+             <button class="btn btn-success" ng-click="">Next</button>
+        </div>
+    </div>
 </div>
